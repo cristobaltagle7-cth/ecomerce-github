@@ -9,3 +9,62 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f9f9f9;
 }
+
+/* =======================================================
+   REQUERIMIENTO 1 (4 Puntos): Layout GRID
+   ======================================================= */
+.grid-container {
+    display: grid;
+    min-height: 100vh;
+    
+    /* Columnas: Sidebar (250px) | Contenido (Resto) */
+    grid-template-columns: 250px 1fr;
+    /* Filas: Header | Contenido | Footer */
+    grid-template-rows: auto 1fr auto;
+    
+    /* Mapa de Áreas */
+    grid-template-areas: 
+        "header header"
+        "aside main"
+        "footer footer";
+}
+
+/* --- Estilos de Áreas --- */
+
+.header {
+    grid-area: header;
+    background-color: #222;
+    color: white;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header nav a {
+    color: #ddd;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+.sidebar {
+    grid-area: aside;
+    background-color: #fff;
+    padding: 1.5rem;
+    border-right: 1px solid #e0e0e0;
+}
+
+.main-content {
+    grid-area: main;
+    padding: 2rem;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #222;
+    color: #888;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
