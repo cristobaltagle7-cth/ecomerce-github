@@ -25,5 +25,4 @@ Este proyecto cumple con el 100% de la rúbrica solicitada:
 El sitio se adapta a dispositivos móviles (max-width: 768px), cambiando el layout de dos columnas a una sola columna vertical para mejorar la experiencia de usuario.
 
 ---
-**Alumno:** [Tu Nombre Aquí]
-**Generación:** [Tu Generación]
+**Alumno:** Cristobal Tagle Hasenlechner
