@@ -10,7 +10,9 @@ body {
     background-color: #f9f9f9;
 }
 
-/* Layout GRID */
+/* =======================================================
+   REQUERIMIENTO 1 (4 Puntos): Layout GRID
+   ======================================================= */
 .grid-container {
     display: grid;
     min-height: 100vh;
@@ -104,4 +106,87 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     
     gap: 25px;
+}
+
+/* =======================================================
+   REQUERIMIENTO 4 (1 Punto): Tarjetas Flexbox
+   ======================================================= */
+.product-card {
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden; /* Para que la imagen respete el borde redondeado */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    
+    /* Flexbox para ordenar elementos internamente */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+/* ESTILO NUEVO PARA LAS IMÁGENES */
+.product-img {
+    width: 100%;
+    height: 180px; /* Altura fija para uniformidad */
+    object-fit: cover; /* Recorta la imagen para que no se deforme */
+    border-bottom: 1px solid #eee;
+}
+
+.card-info {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-grow: 1; /* Ocupa el espacio restante */
+    justify-content: flex-end; /* Empuja el contenido hacia abajo si sobra espacio */
+}
+
+.card-info h4 {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.card-info p {
+    font-size: 1.2rem;
+    color: #27ae60; /* Verde precio */
+    font-weight: bold;
+}
+
+button {
+    background-color: #007bff; /* Azul moderno */
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* =======================================================
+   RESPONSIVE DESIGN (Móvil)
+   ======================================================= */
+@media (max-width: 768px) {
+    .grid-container {
+        /* 1 sola columna */
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        
+        grid-template-areas: 
+            "header"
+            "aside"
+            "main"
+            "footer";
+    }
+    
+    .sidebar {
+        border-right: none;
+        border-bottom: 1px solid #e0e0e0;
+    }
 }
