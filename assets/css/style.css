@@ -10,9 +10,7 @@ body {
     background-color: #f9f9f9;
 }
 
-/* =======================================================
-   REQUERIMIENTO 1 (4 Puntos): Layout GRID
-   ======================================================= */
+/* Layout GRID */
 .grid-container {
     display: grid;
     min-height: 100vh;
@@ -67,4 +65,43 @@ body {
     text-align: center;
     padding: 1rem;
     font-size: 0.9rem;
+}
+
+/* =======================================================
+   REQUERIMIENTO 3 (1 Punto): Sidebar Flexbox
+   ======================================================= */
+.sidebar ul {
+    list-style: none;
+    margin-top: 15px;
+    
+    /* Flexbox vertical para la lista */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar li {
+    padding: 12px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.sidebar li:hover {
+    background-color: #e2e6ea;
+    padding-left: 15px; /* Pequeña animación al pasar el mouse */
+}
+
+/* =======================================================
+   REQUERIMIENTO 2 (4 Puntos): Grilla Productos
+   ======================================================= */
+.main-content {
+    display: grid;
+    
+    /* Genera columnas automáticas de mínimo 220px */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    
+    gap: 25px;
 }
