@@ -2,9 +2,6 @@
 
 Este proyecto es parte de la carrera de Desarrollo Full Stack de **Desafío Latam**. El objetivo fue maquetar la vista principal de una tienda online utilizando **CSS Grid** para la estructura general y **Flexbox** para la alineación de componentes internos.
 
-## 📺 Previsualización
-Puedes ver el proyecto en vivo aquí: [Enlace a tu GitHub Pages] (Opcional: Ver instrucciones abajo)
-
 ## 🛠️ Tecnologías utilizadas
 * **HTML5:** Semántico.
 * **CSS3:**
